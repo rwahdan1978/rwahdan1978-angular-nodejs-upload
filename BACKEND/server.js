@@ -25,6 +25,6 @@ app.post('/api/v1/upload/', upload.array('image', 1), (req, res) => {
  });
 
 const PORT = process.env.PORT || 3000;
-app.listen(3000, () => {
-  console.log(`server started on port 3000`);
+app.listen(PORT, () => {
+  console.log(`server started on port $(POST)`);
 });
