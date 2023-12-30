@@ -4,11 +4,11 @@
    const dotenv = require('dotenv');
    dotenv.config();
     
- //  aws.config.update({
- //   secretAccessKey: "",
- //   accessKeyId: "",
- //   region: 'ap-south-1'
- //  });
+ aws.config.update({
+    secretAccessKey: process.env.secretAccessKey,
+    accessKeyId: process.env.accessKeyId,
+    region: 'ap-south-1'
+   });
    
    const s3 = new aws.S3();
    const upload = multer({
